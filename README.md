@@ -1,5 +1,9 @@
 # wordpress-export-to-markdown
 
+# Specially for Hugo
+
+## Added the option for 'aliases' function. This will get the url of the page/post and put it as aliases in every post/page. Useful if you want to avoid 404 from google search. 
+
 Converts a WordPress export XML file into Markdown files. This makes it easy to migrate from WordPress to a static site generator ([Eleventy](https://www.11ty.dev/), [Gatsby](https://www.gatsbyjs.com/), [Hugo](https://gohugo.io/), etc.).
 
 ![wordpress-export-to-markdown running in a terminal](https://github.com/user-attachments/assets/7ac1aa07-b6ee-46f4-ab49-291c1c45f350)
