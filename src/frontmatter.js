@@ -57,6 +57,22 @@ export function title(post) {
 	return post.data.childValue('title');
 }
 
+export function aliases(post) {
+	const link = post.data.childValue('link');
+	if (!link) {
+		return undefined;
+	}
+
+	try {
+		const url = new URL(link);
+		// Return as array with pathname
+		return [url.pathname];
+	} catch (e) {
+		console.warn(`Could not parse URL "${link}" for post "${post.title}"`);
+		return undefined;
+	}
+}
+
 export function type(post) {
 	// previously parsed but not decoded, can be "post", "page", or other custom types
 	return post.type;
